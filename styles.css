@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +108,7 @@ body {
 
 .done {
   background: #FFCE22;
+  border-color: #FFCE22;
   color: #1F2128;
   font-weight: 400;
   text-align: center;
@@ -118,4 +119,5 @@ body {
 }
 .done:hover {
   background: #FFD84D;
+  border-color: #FFD84D;
 }

@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #ffffff ;
+}
+
+.modal {
+  background: #fff;
+  border-color: #EEEEEE;
+  border-radius: 4px;
+  padding: 10px;
+  width: 326px;
+  box-shadow: 0 1px 4px #141414;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.separator {
+  height: 1px;
+  background: #CDCDCD;
+  border: none;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CDCDCD;
+  border-radius: 6px;
+  position: relative;
+  transition: all .2s;
+}
+
+.item:hover > .checkbox {
+  background: #ffffff;
+  border-color: #BDBDBD;
+}
+
+.item:active > .checkbox {
+  background: #ffffff;
+  border-color: #BDBDBD;
+  box-shadow: 0 1px 3px #2469F6;
+}
+
+.item.checked > .checkbox {
+  background: #2469F6;
+  border-color: #2469F6;
+}
+
+.item.checked:hover > .checkbox {
+  background: #5087F8;
+  border-color: #5087F8;
+
+}
+
+.item.checked:active > .checkbox {
+  background: #2469F6;
+  border-color: #2469F6;
+  box-shadow: 0 1px 3px #2469F6;
+
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: all .15s;
+}
+
+.item:hover > .checkbox::after {
+  border-color: #E3E3E3;
+  transform: rotate(45deg) scale(1);
+}
+
+.item:active > .checkbox::after {
+  border-color: #878787;
+  transform: rotate(45deg) scale(1);
+}
+
+.item.checked > .checkbox::after {
+  border-color: #fff;
+  transform: rotate(45deg) scale(1);
+}
+
+.done {
+  background: #FFCE22;
+  color: #1F2128;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.done:hover {
+  background: #FFD84D;
+}
